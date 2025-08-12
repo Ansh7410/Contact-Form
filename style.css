@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #010a3f, #418d85, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    width: 350px;
+    text-align: center;
+    
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #141212;
+    box-shadow: 0 0 8px rgba(23, 23, 23, 0.6);
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #010101;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005317;
+}
+
+.validation-msg {
+    font-size: 12px;
+    position: absolute;
+    top: 100%;
+    left: 5px;
+    color: yellow;
+}
+
+#success-message {
+    display: none;
+    color: #4caf50;
+    font-size: 20px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
